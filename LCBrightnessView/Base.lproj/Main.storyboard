@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-XG-7X2" userLabel="brightnessLabel">
+                                <rect key="frame" x="20" y="596" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sWX-7a-ZRA" userLabel="brightnessSlider">
+                                <rect key="frame" x="130" y="591.5" width="227" height="31"/>
+                                <connections>
+                                    <action selector="brightnessSliderTouchUp:" destination="BYZ-38-t0r" eventType="touchCancel" id="6q9-9r-b3G"/>
+                                    <action selector="brightnessSliderTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="jlL-5h-TrH"/>
+                                    <action selector="brightnessSliderTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQM-MV-6Vm"/>
+                                    <action selector="brightnessSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z51-SU-twY"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="V2b-XG-7X2" secondAttribute="bottom" constant="50" id="L2M-bQ-9mU"/>
+                            <constraint firstItem="sWX-7a-ZRA" firstAttribute="leading" secondItem="V2b-XG-7X2" secondAttribute="trailing" constant="30" id="RWU-CH-xma"/>
+                            <constraint firstAttribute="trailing" secondItem="sWX-7a-ZRA" secondAttribute="trailing" constant="20" id="ZlN-NK-HIi"/>
+                            <constraint firstItem="V2b-XG-7X2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mqO-DT-R0j"/>
+                            <constraint firstItem="sWX-7a-ZRA" firstAttribute="centerY" secondItem="V2b-XG-7X2" secondAttribute="centerY" id="pxa-AU-FHZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="sWX-7a-ZRA" id="bmg-CE-w6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
